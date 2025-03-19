@@ -165,7 +165,6 @@ config ASAN_NOP_DLCLOSE
 
 config UBSAN
 	bool "Build with undefined behavior sanitizer"
-	depends on ARCH_POSIX
 	help
 	  Builds Zephyr with Undefined Behavior Sanitizer enabled.
 	  This is currently only supported by boards based on the posix

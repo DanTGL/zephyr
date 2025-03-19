@@ -10,6 +10,13 @@ zephyr_sources_ifdef(
   asan_hacks.c
   )
 
+if(!CONFIG_ARCH_POSIX)
+  zephyr_sources_ifdef(
+    CONFIG_UBSAN
+    ubsan.c
+  )
+endif()
+
 zephyr_sources_ifdef(
   CONFIG_THREAD_ANALYZER
   thread_analyzer.c
